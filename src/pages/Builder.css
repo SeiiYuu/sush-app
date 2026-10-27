@@ -26,7 +26,7 @@
 }
 
 .label { font-weight: 800; margin: 8px 0; }
-.presets { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 8px; }
+.presets { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
 .preset {
   flex: none; padding: 10px 14px; border-radius: 12px;
   border: 2px solid var(--nori); background: var(--rice);
