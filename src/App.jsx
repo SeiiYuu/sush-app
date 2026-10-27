@@ -1,5 +1,7 @@
+import Builder from './pages/Builder'
+
 function App() {
-  return <h1>Sushi App</h1>
+  return <Builder />
 }
 
 export default App

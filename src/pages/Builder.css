@@ -1,0 +1,26 @@
+.builder { max-width: 960px; margin: 0 auto; padding: 16px; }
+.builder-body { display: flex; flex-direction: column; gap: 24px; align-items: center; }
+.preview { width: 100%; display: flex; justify-content: center; }
+.controls { width: 100%; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 12px; border-radius: 999px;
+  border: 2px solid var(--nori); background: white;
+  font-family: inherit; font-weight: 600; cursor: pointer;
+}
+.chip.on { background: var(--wasabi); }
+.chip small { opacity: 0.7; }
+.dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.2); }
+.allergens { color: #b3402a; font-weight: 600; }
+.total { display: flex; justify-content: space-between; font-size: 1.4rem; margin: 16px 0 8px; }
+.cta {
+  width: 100%; padding: 14px; border: 0; border-radius: 12px;
+  background: var(--nori); color: var(--cream);
+  font-family: inherit; font-weight: 800; font-size: 1rem; cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .builder-body { flex-direction: row; align-items: flex-start; }
+  .preview, .controls { flex: 1; }
+}
