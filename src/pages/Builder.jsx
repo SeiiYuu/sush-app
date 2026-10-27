@@ -1,10 +1,17 @@
 import { useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
+import { useCart } from '../CartContext'
 import RollPreview from '../components/RollPreview'
 import { ingredients, presets, BASE_PRICE } from '../data/ingredients'
 import './Builder.css'
 
 export default function Builder() {
-  const [selected, setSelected] = useState(['cheese', 'salmon', 'avocado', 'cucumber'])
+  const location = useLocation()
+  const navigate = useNavigate()
+  const { addItem } = useCart()
+  const [selected, setSelected] = useState(
+    location.state?.preset ?? ['cheese', 'salmon', 'avocado', 'cucumber']
+    )
 
   const toggle = (id) =>
     setSelected((prev) =>
@@ -14,6 +21,10 @@ export default function Builder() {
   const chosen = ingredients.filter((i) => selected.includes(i.id))
   const total = BASE_PRICE + chosen.reduce((sum, i) => sum + i.price, 0)
   const allergens = [...new Set(chosen.flatMap((i) => i.allergens))]
+  const addToCart = () => {
+  addItem({ name: 'Custom roll', details: chosen.map((i) => i.name).join(', '), price: total })
+  navigate('/cart')
+}
 
   return (
     <div className="builder">
@@ -59,7 +70,7 @@ export default function Builder() {
             <span>Total</span>
             <strong>₱{total}</strong>
           </div>
-          <button className="cta">Add to cart</button>
+          <button className="cta" onClick={addToCart} disabled={chosen.length === 0}>Add to cart</button>
         </div>
       </div>
     </div>
