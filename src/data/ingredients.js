@@ -12,3 +12,11 @@ export const ingredients = [
   { id: 'cheese',     name: 'Cream cheese',    price: 30, color: '#FFFDF5', allergens: ['dairy'],             pos: [100, 100] },
   { id: 'sesame',     name: 'Sesame seeds',    price: 10, color: '#D9C9A3', allergens: ['sesame'],            type: 'topping' },
 ]
+
+export const presets = [
+  { id: 'california', name: 'California Roll', emoji: '🥑', items: ['crab', 'avocado', 'cucumber', 'sesame'] },
+  { id: 'salmon-lover', name: 'Salmon Lover', emoji: '🍣', items: ['salmon', 'avocado', 'cheese'] },
+  { id: 'spicy-tuna', name: 'Tuna Crunch', emoji: '🔥', items: ['tuna', 'cucumber', 'carrot', 'sesame'] },
+  { id: 'tempura', name: 'Tempura Crunch', emoji: '🍤', items: ['shrimp', 'avocado', 'cheese', 'sesame'] },
+  { id: 'veggie', name: 'Garden Veggie', emoji: '🥒', items: ['avocado', 'cucumber', 'carrot', 'egg'] },
+]

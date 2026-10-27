@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import RollPreview from '../components/RollPreview'
-import { ingredients, BASE_PRICE } from '../data/ingredients'
+import { ingredients, presets, BASE_PRICE } from '../data/ingredients'
 import './Builder.css'
 
 export default function Builder() {
@@ -25,6 +25,19 @@ export default function Builder() {
         </div>
 
         <div className="controls">
+            <p className="label">Start from a favorite</p>
+                <div className="presets">
+                {presets.map((p) => (
+                    <button
+                    key={p.id}
+                    className="preset"
+                    onClick={() => setSelected(p.items)}
+                    >
+                    {p.emoji} {p.name}
+                    </button>
+                ))}
+                </div>
+                <p className="label">Customize it</p>
           <div className="chips">
             {ingredients.map((i) => (
               <button
