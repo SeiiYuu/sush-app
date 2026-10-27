@@ -1,0 +1,17 @@
+:root {
+  --nori: #1F2A24;
+  --rice: #F6F1E7;
+  --salmon: #F47C5E;
+  --avocado: #8DB255;
+  --wasabi: #A4C639;
+  --cream: #FFF9F0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--nori);
+  font-family: 'Nunito', system-ui, sans-serif;
+}
