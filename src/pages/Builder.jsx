@@ -4,7 +4,7 @@ import { ingredients, BASE_PRICE } from '../data/ingredients'
 import './Builder.css'
 
 export default function Builder() {
-  const [selected, setSelected] = useState(['salmon', 'avocado', 'cucumber'])
+  const [selected, setSelected] = useState(['cheese', 'salmon', 'avocado', 'cucumber'])
 
   const toggle = (id) =>
     setSelected((prev) =>

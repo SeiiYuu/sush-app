@@ -35,7 +35,7 @@ export default function RollPreview({ selected }) {
               key={item.id}
               cx={item.pos[0]}
               cy={item.pos[1]}
-              r="14"
+              r="17"
               fill={item.color}
               stroke="rgba(0,0,0,0.15)"
               strokeWidth="1.5"
