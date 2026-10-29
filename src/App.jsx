@@ -5,6 +5,7 @@ import Cart from './pages/Cart'
 import Confirmation from './pages/Confirmation'
 import { useCart } from './CartContext.jsx'
 import './App.css'
+import Pay from './pages/Pay'
 
 export default function App() {
   const { items } = useCart()
@@ -12,7 +13,7 @@ export default function App() {
   return (
     <>
       <nav className="nav">
-        <Link to="/" className="logo">🍣 Sushi App</Link>
+        <Link to="/" className="logo">🍣 Sushae Box</Link>
         <div className="nav-links">
           <Link to="/build">Build</Link>
           <Link to="/cart">Cart ({items.length})</Link>
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/build" element={<Builder />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/pay" element={<Pay />} />
       </Routes>
     </>
   )

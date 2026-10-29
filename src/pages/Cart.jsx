@@ -1,10 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useCart } from '../CartContext.jsx'
-
-const DELIVERY_FEE = 49
+import { useCart, DELIVERY_FEE } from '../CartContext.jsx'
 
 export default function Cart() {
-  const { items, removeItem, placeOrder, subtotal } = useCart()
+  const { items, removeItem, subtotal } = useCart()
   const navigate = useNavigate()
   const total = subtotal + DELIVERY_FEE
 
@@ -18,10 +16,7 @@ export default function Cart() {
     )
   }
 
-  const checkout = () => {
-    placeOrder(total)
-    navigate('/confirmation')
-  }
+  const checkout = () => navigate('/pay')
 
   return (
     <div className="page">

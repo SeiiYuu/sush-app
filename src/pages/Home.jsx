@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="page">
       <section className="hero">
-        <h1>Sushi, your way.</h1>
+        <h1>Sushae Box, your way.</h1>
         <p>Build your roll, watch it come together, and have it delivered.</p>
         <Link to="/build" className="cta link-cta">Build your own roll</Link>
       </section>

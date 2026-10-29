@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from 'react'
+export const DELIVERY_FEE = 49
 
 const CartContext = createContext(null)
 
